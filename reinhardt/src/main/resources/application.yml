@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: reinhardt
+
+server:
+  port: 8081
+
+zuul:
+  sensitive-headers:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
+  routes:
+    mcree:
+      path: /mcree/**
+      url: http://localhost:8080
+      stripPrefix: true # false일 경우 url 뒤에 path를 그대로 붙여서 routing함. true일 경우 path의 mcree부분을 제거 후 url에 routing

@@ -1,4 +1,4 @@
 rootProject.name = 'springcloud'
 
-include 'eureka', 'mcree-service'
+include 'eureka', 'mcree-service', 'reinhardt'
 
